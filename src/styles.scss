@@ -19,7 +19,6 @@ body {
 
 .mdc-tooltip {
   position: relative;
-
   &::after {
     width: 0;
     height: 0;
@@ -27,7 +26,7 @@ body {
     position: absolute;
     border-left: 0.5rem solid transparent;
     border-right: 0.5rem solid transparent;
-    border-bottom: 0.5rem solid #616161;
+    border-bottom: 0.5rem solid #0b243d;
   }
 
   &.above {
@@ -38,6 +37,17 @@ body {
       right: calc(50% - 0.5rem);
       transform: rotate(180deg);
     }
+  }
+  .mdc-tooltip__surface{
+    background-color: #0b243d;
+    color: rgba(255, 255, 255, 0.76);
+    padding: 10px 5px;
+    border-radius: 0.25rem;
+    font-size: 16px;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   }
 }
 

@@ -12,7 +12,11 @@
         {{stage.dealsCounter}}
       </div>
 
-      <div class="state" >
+      <div
+        matTooltip="Probability Status {{stage.potential}}"
+        matTooltipClass="above"
+        matTooltipPosition="above"
+        class="state" >
         <mat-icon class="state-icon">view_column</mat-icon>
         {{stage.potential}}
       </div>

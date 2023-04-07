@@ -1,7 +1,7 @@
 import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {EMPTY_STAGE, StageModel} from "../../interfaces/stage-model";
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop";
-import {DealsModel} from "../../interfaces/deals-model";
+import {DealsModel, EMPTY_DEAL} from "../../interfaces/deals-model";
 import {DealsService} from "../../services/deals/deals.service";
 
 @Component({
@@ -37,4 +37,6 @@ export class StageColumnComponent {
         .subscribe((data) => console.log(data))
     }
   }
+
+  protected readonly EMPTY_DEAL = EMPTY_DEAL;
 }
