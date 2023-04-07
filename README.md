@@ -21,7 +21,9 @@ Deals Angular Drag and Drop is a web application built using Angular 15 and SCSS
 - Optimistic approach to update deals once they are dropped into a category.
 
 ## Video Demo
-[demo.mp4](..%2F..%2F..%2F..%2F..%2F..%2Fhome%2Fmoe%2FDownloads%2Fdemo.mp4)
+
+https://user-images.githubusercontent.com/55113727/230678367-78753240-19b5-4e3d-95fb-66a0fd4eab90.mp4
+
 
 ## About The Project
 Deals Angular Drag and Drop: is a web application built using Angular 15 and SCSS that allows users to organize deals and items by dragging and dropping them into different categories. This project provides a user-friendly interface to manage deals and helps to keep track of items that are associated with each deal.
