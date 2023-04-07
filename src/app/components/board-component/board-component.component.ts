@@ -27,6 +27,7 @@ export class BoardComponentComponent implements OnInit, AfterViewInit {
     this.stages$ = this.dealService.getDeals();
 
 
+
   }
 
   ngAfterViewInit() {

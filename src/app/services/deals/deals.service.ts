@@ -13,26 +13,41 @@ export class DealsService {
     {
       id: '1',
       name: 'Potential Value',
+      dealsCounter: 29,
+      potential: 2.36,
+      notifications: 2,
       deals: []
     },
     {
       id: '2',
       name: 'Focus',
+      dealsCounter: 4,
+      potential: 30,
+      notifications: 6,
       deals: []
     },
     {
       id: '3',
       name: 'Contact Made',
+      dealsCounter: 6,
+      potential: 425,
+      notifications: 2,
       deals: []
     },
     {
       id: '4',
       name: 'Offer Sent',
+      dealsCounter: 3,
+      potential: 57.65,
+      notifications: 0,
       deals: []
     },
     {
       id: '5',
       name: 'Getting Ready',
+      dealsCounter: 13,
+      potential: 17.4,
+      notifications: 2,
       deals: []
     }
   ]

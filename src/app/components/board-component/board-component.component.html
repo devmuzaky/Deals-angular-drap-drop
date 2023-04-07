@@ -3,15 +3,13 @@
   <div class="board-header">
     <h1>Deals</h1>
     <div class="search">
-      <mat-form-field appearance="fill">
-        <input #input matInput/>
-        <mat-icon matPrefix>search</mat-icon>
-      </mat-form-field>
+        <input class="search-input" #input matInput placeholder="Search by name or email">
     </div>
+
+
   </div>
 
-  <div cdkDropListGroup class="board"
-  >
+  <div cdkDropListGroup class="board">
     <app-stage-column *ngFor="let stage of currentValues$ | async" [stage]="stage" class="board-list">
     </app-stage-column>
   </div>

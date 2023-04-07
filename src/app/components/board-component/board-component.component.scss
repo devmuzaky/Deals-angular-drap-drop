@@ -12,12 +12,35 @@
     justify-content: space-between;
     align-items: center;
     font-size: 10px;
+
+    .search{
+
+      .search-input{
+        border: 2px solid #9E9E9E;
+        background-color: #ffffff;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        padding: 0.5rem .5rem;
+        color: #4A5568;
+        margin-bottom: 1rem;
+        margin-right: 8px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #A0AEC0;
+        }
+      }
+    }
   }
 
   .board {
     display: flex;
     padding: 0;
     align-items: center;
+    overflow-x: auto;
 
     .board-list {
       margin-right: .5rem;
@@ -39,4 +62,9 @@
   .mat-mdc-form-field-input-control {
     height: 48px !important;
   }
+}
+
+::ng-deep .mat-form-field {
+  border: none;
+  box-shadow: none;
 }

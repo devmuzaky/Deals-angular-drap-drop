@@ -2,8 +2,8 @@
 .card-wrap {
   touch-action: manipulation;
   cursor: grab;
-  margin-bottom: 10px;
-  width: 100%;
+  width: 96%;
+  margin: auto auto 8px;
 
   .card {
     display: flex;
@@ -20,10 +20,7 @@
     padding: 5px;
     gap: 10px;
 
-    .icon {
-      font-size: 14px;
-      color: gray;
-    }
+
 
     .section1 {
       display: flex;
@@ -40,6 +37,10 @@
       .icon-container {
         display: flex;
         padding: 2px 5px;
+
+        @media (max-width: 768px) {
+          padding: 1px 1px;
+        }
       }
     ;
     }
@@ -52,6 +53,10 @@
       .state {
         margin-right: 10px;
         color: #000;
+
+        @media (max-width: 768px) {
+          margin-right: 7px;
+        }
       }
 
       .probability {
@@ -68,10 +73,18 @@
       .name {
         margin-right: 10px;
         color: gray;
+
+        @media (max-width: 768px) {
+          margin-right: 6px;
+          font-size: 10px;
+        }
       }
 
       .phone {
         color: gray;
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
       }
     }
 
@@ -83,7 +96,15 @@
         margin-right: 10px;
         color: gray;
       }
+
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
     }
+
+    @media (max-width: 768px) {
+      padding: 4px;
+      gap: 2px;    }
 
   }
 }

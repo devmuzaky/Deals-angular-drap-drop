@@ -55,16 +55,32 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 180px;
+
+  @media (max-width: 600px) {
+    max-width: 70px;
+  }
 }
 
 .badge {
-  background: #575757;
+  background: #9ca9b7;
   color: #ffffff !important;
   border-radius: 10%;
   padding: 2px 5px;
   font-size: 14px !important;
+  text-transform: uppercase;
+  font-weight: 500;
 
   &--blue {
-    background: #2196f3;
+    background: #2f87e1
   }
+
+  @media (max-width: 600px) {
+    padding: 0 3px;
+    font-size: 12px !important;  }
+
+}
+
+.icon {
+  font-size: 12px;
+  color: gray;
 }

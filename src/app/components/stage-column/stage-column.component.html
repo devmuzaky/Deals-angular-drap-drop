@@ -1,7 +1,32 @@
 <div class="stage-container">
-  <div class="title">
-    {{ stage.name }}
+
+  <div class="stage-header">
+    <div class="title">
+      {{ stage.name }}
+    </div>
+
+    <div class="header-states">
+
+      <div class="state" >
+        <mat-icon class="state-icon">shopping_bag</mat-icon>
+        {{stage.dealsCounter}}
+      </div>
+
+      <div class="state" >
+        <mat-icon class="state-icon">view_column</mat-icon>
+        {{stage.potential}}
+      </div>
+
+      <div class="state" >
+        <mat-icon class="state-icon">notifications</mat-icon>
+        {{stage.notifications}}
+      </div>
+
+
+    </div>
+
   </div>
+
 
   <div (cdkDropListDropped)="drop($event)" [cdkDropListData]="stage.deals" [id]="stage.id" cdkDropList
        class="stage">
@@ -9,3 +34,4 @@
   </div>
 
 </div>
+
