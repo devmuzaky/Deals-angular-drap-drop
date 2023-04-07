@@ -6,3 +6,35 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-bottom: 5px solid black;
+}
+
+
+.mdc-tooltip {
+  position: relative;
+  &::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #616161;
+  }
+
+  &.above {
+    overflow: initial;
+    &:after {
+      bottom: -0.5rem;
+      right: calc(50% - 0.5rem);
+      transform: rotate(180deg);
+    }
+  }
+}

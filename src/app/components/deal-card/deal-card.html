@@ -8,14 +8,28 @@
         <button mat-icon-button>
           <mat-icon>more_horiz</mat-icon>
         </button>
-
-
     </div>
 
 
     <div class="section2">
       <div class="state">{{deal.state}}</div>
-      <div class="probability">{{deal.probability_status}}</div>
+<!--      <div class="tooltip-container" cdkScrollable>-->
+<!--        <button mat-raised-button-->
+<!--                matTooltip="Info about the action"-->
+<!--                matTooltipPosition="above"-->
+<!--                matTooltipHideDelay="1000000000000000"-->
+<!--                matTooltipClass="above"-->
+<!--                aria-label="Button that displays a tooltip that hides when scrolled out of the container"-->
+<!--                class="tooltip-button">-->
+<!--          {{deal.probability_status}}-->
+<!--        </button>-->
+<!--      </div>-->
+      <div class="probability"
+           matTooltip="Probability Status {{deal.probability_status}}"
+           matTooltipPosition="above"
+           matTooltipClass="above"
+
+      >{{deal.probability_status}}</div>
     </div>
 
     <div class="section3">

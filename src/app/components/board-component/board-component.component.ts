@@ -1,78 +1,42 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DealsModel} from "../../interfaces/deals-model";
 import {StageModel} from "../../interfaces/stage-model";
+import {DealsService} from "../../services/deals/deals.service";
+import {debounceTime, distinctUntilChanged, EMPTY, fromEvent, map, merge, mergeAll, Observable, switchMap} from "rxjs";
 
-
-const stagesData: StageModel[] = [
-  {
-    id: '1',
-    name: 'Potential Value',
-    deals: [
-
-    ]
-  },
-  {
-    id: '2',
-    name: 'Focus',
-    deals: []
-  },
-  {
-    id: '3',
-    name: 'Contact Made',
-    deals: []
-  },
-  {
-    id: '4',
-    name: 'Offer Sent',
-    deals: [ {
-      id: 1,
-      first_name: 'John',
-      last_name: 'Doe',
-      email: 'exaple@ex.com',
-      phone: '123-456-7890',
-      company: 'ABC Company',
-      status: 'New',
-      date: '2019-01-01',
-      probability_status: '25%',
-      state: 'New'
-    },
-      {
-        id: 2,
-        first_name: 'John',
-        last_name: 'Doe',
-        email: 'exaple@ex.com',
-        phone: '123-456-7890',
-        company: 'ABC Company',
-        status: 'New',
-        date: '2019-01-01',
-        probability_status: '25%',
-        state: 'New'
-      },]
-  },
-  {
-    id: '5',
-    name: 'Getting Ready',
-    deals: []
-  }
-]
 
 @Component({
   selector: 'app-board-component',
   templateUrl: './board-component.component.html',
   styleUrls: ['./board-component.component.scss']
 })
-export class BoardComponentComponent implements OnInit {
+export class BoardComponentComponent implements OnInit, AfterViewInit {
 
 
-  stages: StageModel[] = stagesData;
+  @ViewChild('input') input!: ElementRef;
 
+  stages$: Observable<StageModel[]> = EMPTY;
+  searchResult$: Observable<StageModel[]> = EMPTY;
+  currentValues$: Observable<StageModel[]> = EMPTY;
 
-  constructor() {
+  constructor(private dealService: DealsService) {
   }
+
 
   ngOnInit() {
+    this.stages$ = this.dealService.getDeals();
+
 
   }
 
+  ngAfterViewInit() {
+    this.searchResult$ = fromEvent(this.input.nativeElement, 'keyup')
+      .pipe(map((event: any) => {
+          return event.target.value;
+        }), debounceTime(100),
+        distinctUntilChanged(),
+        switchMap((search: string): Observable<StageModel[]> => this.dealService.searchDeal(search)))
 
+    this.currentValues$ = merge(this.stages$, this.searchResult$);
+  }
 }

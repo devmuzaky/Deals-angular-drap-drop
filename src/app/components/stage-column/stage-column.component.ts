@@ -2,6 +2,7 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {EMPTY_STAGE, StageModel} from "../../interfaces/stage-model";
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop";
 import {DealsModel} from "../../interfaces/deals-model";
+import {DealsService} from "../../services/deals/deals.service";
 
 @Component({
   selector: 'app-stage-column',
@@ -12,6 +13,9 @@ import {DealsModel} from "../../interfaces/deals-model";
 })
 export class StageColumnComponent {
   @Input() stage: StageModel = EMPTY_STAGE
+
+  constructor(private dealsService: DealsService) {
+  }
 
   drop(event: CdkDragDrop<DealsModel[]>) {
     let isMovingInsideTheSameList = event.previousContainer === event.container;
@@ -28,6 +32,9 @@ export class StageColumnComponent {
         event.previousIndex,
         event.currentIndex
       );
+
+      this.dealsService.updateStatus(event.container.data[event.currentIndex].id, event.container.id, event.previousContainer.id)
+        .subscribe((data) => console.log(data))
     }
   }
 }

@@ -1,18 +1,21 @@
 
-<div class="board-container">
+<div class="board-container"
 
-<!--  <div class="board-header">-->
-<!--    <h1>Deals</h1>-->
-<!--      <div class="search">-->
-<!--        <mat-form-field appearance="fill">-->
-<!--          <input matInput  />-->
-<!--          <mat-icon matPrefix>search</mat-icon>-->
-<!--        </mat-form-field>-->
-<!--      </div>-->
-<!--  </div>-->
+>
 
-    <div cdkDropListGroup class="board">
-    <app-stage-column *ngFor="let stage of stages" [stage]="stage"  class="board-list">
+  <div class="board-header">
+    <h1>Deals</h1>
+      <div class="search">
+        <mat-form-field appearance="fill">
+          <input matInput #input  />
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+      </div>
+  </div>
+
+    <div cdkDropListGroup class="board"
+    >
+    <app-stage-column *ngFor="let stage of currentValues$ | async" [stage]="stage"  class="board-list">
     </app-stage-column>
   </div>
 

@@ -13,6 +13,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import {HttpClientModule} from "@angular/common/http";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {MatMenuModule} from "@angular/material/menu";
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
