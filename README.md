@@ -1,28 +1,75 @@
-# DealsDragDrop
+<br />
+<p align="center">
+  <a href="https://devmuzaky.github.io/Deals-angular-drap-drop/">
+  </a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+<h3 align="center">Deals Drag and Drop By Angular</h3>
 
-## Development server
+  <p align="center">
+Deals Angular Drag and Drop is a web application built using Angular 15 and SCSS that allows users to organize deals and items by dragging and dropping them into different categories. It includes features such as filtering based on various criteria. Additionally, the application offers a search feature using Typeahead and debouncing to quickly find specific deals or items, and updates deals using an optimistic approach.
+    <br />
+    <br />
+    <a href="https://devmuzaky.github.io/Deals-angular-drap-drop/">View Demo</a>
+    ·
+    <a href="https://github.com/devmuzaky/Deals-angular-drap-drop/issues">Report Bug</a>
+  </p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Features
+- Drag and drop functionality to organize deals.
+- Search feature with Typeahead using debouncing to quickly find specific deals.
+- Optimistic approach to update deals once they are dropped into a category.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Video Demo
+[demo.mp4](..%2F..%2F..%2F..%2F..%2F..%2Fhome%2Fmoe%2FDownloads%2Fdemo.mp4)
 
-## Build
+## About The Project
+Deals Angular Drag and Drop: is a web application built using Angular 15 and SCSS that allows users to organize deals and items by dragging and dropping them into different categories. This project provides a user-friendly interface to manage deals and helps to keep track of items that are associated with each deal.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Built With
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Built with the following technologies:
+- [Angular](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [SCSS](https://sass-lang.com/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [TypeScript](https://www.typescriptlang.org/)
 
-## Running end-to-end tests
+<!-- GETTING STARTED -->
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Getting Started
 
-## Further help
+To get started with project just simply fork this repo or download locally on your System.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Deals-angular-drap-drop
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+Start with the latest version of NPM to avoid any errors:
+
+- npm
+  ```sh
+  npm install npm
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/devmuzaky/Deals-angular-drap-drop.git
+   ```
+2. Install dependencies npm install
+3. Start the server ng serve
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+Open the application in your web browser at http://localhost:4200/. You can now start organizing your deals and items by dragging and dropping them into different categories. Use the search feature to quickly find specific deals or items.
+
+[//]: # (Add Contact Info)
+
+## Contact
+- LinkedIn - [devmuzaky](https://www.linkedin.com/in/devmuzaky/)
+- Twitter - [@devmuzaky](https://twitter.com/devmuzaky)
+
