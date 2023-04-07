@@ -10,3 +10,16 @@ export interface DealsModel {
   probability_status: string;
   state: string;
 }
+
+export const EMPTY_DEAL: DealsModel = {
+  id: -1,
+  first_name: '',
+  last_name: '',
+  email: '',
+  phone: '',
+  company: '',
+  status: '',
+  date: '',
+  probability_status: '',
+  state: ''
+}

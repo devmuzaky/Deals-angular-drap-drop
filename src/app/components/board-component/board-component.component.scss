@@ -1,0 +1,40 @@
+.board{
+  display: flex;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.board-list {
+  margin-right: .5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: .125rem;
+  background-color: #f4f5f7;
+  flex-shrink: 0;
+  width: calc(20% - 8px);
+  min-height: 400px;
+  min-width: 200px;
+}
+.board-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.board-container{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  height: 48px;
+
+  .mat-mdc-form-field-input-control {
+    height: 48px !important;
+  }
+}

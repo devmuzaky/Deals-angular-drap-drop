@@ -1,0 +1,34 @@
+<div class="card-wrap">
+
+  <div class="card">
+
+    <div class="section1">
+      <div class="card-title">{{deal.company}}</div>
+
+        <button mat-icon-button>
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+
+
+    </div>
+
+
+    <div class="section2">
+      <div class="state">{{deal.state}}</div>
+      <div class="probability">{{deal.probability_status}}</div>
+    </div>
+
+    <div class="section3">
+      <mat-icon class="icon">phone</mat-icon>
+      <div class="name">{{deal.first_name}} {{deal.last_name}}</div>
+      <div class="phone">{{deal.phone}}</div>
+    </div>
+
+    <div class="section4">
+      <mat-icon class="icon">calendar_today</mat-icon>
+
+      <div class="date">{{deal.date}}</div>
+    </div>
+
+  </div>
+</div>
