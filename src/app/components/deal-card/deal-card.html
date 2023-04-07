@@ -3,45 +3,40 @@
   <div class="card">
 
     <div class="section1">
-      <div class="card-title">{{deal.company}}</div>
+      <div [title]="deal.company" class="card-title eclipse">
+        {{deal.company.split('-').join(" ")}}
+      </div>
 
-        <button mat-icon-button>
-          <mat-icon>more_horiz</mat-icon>
-        </button>
+      <div class="icon-container clickable">
+        <mat-icon>more_horiz</mat-icon>
+      </div>
     </div>
 
 
     <div class="section2">
-      <div class="state">{{deal.state}}</div>
-<!--      <div class="tooltip-container" cdkScrollable>-->
-<!--        <button mat-raised-button-->
-<!--                matTooltip="Info about the action"-->
-<!--                matTooltipPosition="above"-->
-<!--                matTooltipHideDelay="1000000000000000"-->
-<!--                matTooltipClass="above"-->
-<!--                aria-label="Button that displays a tooltip that hides when scrolled out of the container"-->
-<!--                class="tooltip-button">-->
-<!--          {{deal.probability_status}}-->
-<!--        </button>-->
-<!--      </div>-->
-      <div class="probability"
-           matTooltip="Probability Status {{deal.probability_status}}"
-           matTooltipPosition="above"
-           matTooltipClass="above"
+      <div class="state badge">{{deal.state}}</div>
 
-      >{{deal.probability_status}}</div>
+      <div class="probability badge badge--blue"
+           matTooltip="Probability Status {{deal.probability_status}}"
+           matTooltipClass="above"
+           matTooltipPosition="above"
+      >
+        {{deal.probability_status}}
+      </div>
     </div>
 
     <div class="section3">
       <mat-icon class="icon">phone</mat-icon>
-      <div class="name">{{deal.first_name}} {{deal.last_name}}</div>
-      <div class="phone">{{deal.phone}}</div>
+      <div [title]="deal.first_name + deal.last_name" class="name eclipse">{{deal.first_name}} {{deal.last_name}}</div>
+      <div class="phone"> {{deal.phone | cardPhone}}</div>
+
+
     </div>
 
     <div class="section4">
       <mat-icon class="icon">calendar_today</mat-icon>
 
-      <div class="date">{{deal.date}}</div>
+      <div class="date">{{deal.date  | cardDate}}</div>
     </div>
 
   </div>

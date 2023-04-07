@@ -46,19 +46,6 @@ export class DealsService {
       map((response: { deals: DealsModel[] }): StageModel[] => {
           this.stages.forEach((stage: StageModel) => stage.deals = response.deals.filter((deal: DealsModel) => deal.status === stage.name));
           return this.stages;
-
-          // const stages: StageModel[] = JSON.parse(JSON.stringify(this.stagesData));
-
-          // stages.forEach(
-          //   (stage: StageModel) => stage.deals = []
-          // );
-          // deals.forEach((deal: DealsModel) => {
-          //   const stage = stages.find((stage: StageModel) => stage.name === deal.status);
-          //   if (stage) {
-          //     stage.deals.push(deal);
-          //   }
-          // });
-
         }
       ))
   }
@@ -79,7 +66,7 @@ export class DealsService {
   updateStatus(dealId: number, newStatus: string, oldStatus: string): Observable<DealsModel> {
     const stage = this.stages.find((stage: StageModel) => stage.id === newStatus);
     if (stage) {
-      const deal = stage  .deals.find((deal: DealsModel) => deal.id === dealId);
+      const deal = stage.deals.find((deal: DealsModel) => deal.id === dealId);
       if (deal) {
         deal.status = stage.name;
         console.log(deal);

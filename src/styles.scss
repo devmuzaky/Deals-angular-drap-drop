@@ -19,6 +19,7 @@ body {
 
 .mdc-tooltip {
   position: relative;
+
   &::after {
     width: 0;
     height: 0;
@@ -31,10 +32,39 @@ body {
 
   &.above {
     overflow: initial;
+
     &:after {
       bottom: -0.5rem;
       right: calc(50% - 0.5rem);
       transform: rotate(180deg);
     }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: #e0e0e0;
+  border-radius: 50%;
+}
+
+.eclipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.badge {
+  background: #575757;
+  color: #ffffff !important;
+  border-radius: 10%;
+  padding: 2px 5px;
+  font-size: 14px !important;
+
+  &--blue {
+    background: #2196f3;
   }
 }

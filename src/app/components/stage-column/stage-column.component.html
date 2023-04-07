@@ -1,10 +1,10 @@
-<div class="status-list">
+<div class="stage-container">
   <div class="title">
     {{ stage.name }}
   </div>
 
-  <div cdkDropList [cdkDropListData]="stage.deals" (cdkDropListDropped)="drop($event)"  [id]="stage.id"
-        class="card-container">
+  <div (cdkDropListDropped)="drop($event)" [cdkDropListData]="stage.deals" [id]="stage.id" cdkDropList
+       class="stage">
     <deal-card *ngFor="let deal of stage.deals" [cdkDragData]="deal" [deal]="deal" cdkDrag></deal-card>
   </div>
 
