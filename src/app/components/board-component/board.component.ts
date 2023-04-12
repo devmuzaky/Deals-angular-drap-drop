@@ -1,17 +1,15 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {DealsModel} from "../../interfaces/deals-model";
 import {StageModel} from "../../interfaces/stage-model";
 import {DealsService} from "../../services/deals/deals.service";
-import {debounceTime, distinctUntilChanged, EMPTY, fromEvent, map, merge, mergeAll, Observable, switchMap} from "rxjs";
+import {debounceTime, distinctUntilChanged, EMPTY, fromEvent, map, merge, Observable, switchMap} from "rxjs";
 
 
 @Component({
   selector: 'app-board-component',
-  templateUrl: './board-component.component.html',
-  styleUrls: ['./board-component.component.scss']
+  templateUrl: './board.component.html',
+  styleUrls: ['./board.component.scss']
 })
-export class BoardComponentComponent implements OnInit, AfterViewInit {
-
+export class BoardComponent implements OnInit, AfterViewInit {
 
   @ViewChild('input') input!: ElementRef;
 
@@ -25,9 +23,6 @@ export class BoardComponentComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.stages$ = this.dealService.getDeals();
-
-
-
   }
 
   ngAfterViewInit() {

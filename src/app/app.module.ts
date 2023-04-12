@@ -4,7 +4,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {BoardComponentComponent} from './components/board-component/board-component.component';
+import {BoardComponent} from './components/board-component/board.component';
 import {CdkDrag, CdkDropList, CdkDropListGroup} from "@angular/cdk/drag-drop";
 import {StageColumnComponent} from './components/stage-column/stage-column.component';
 import {DealCard} from './components/deal-card/deal-card';
@@ -21,7 +21,7 @@ import {CardPhonePipe} from './pipes/card-phone/card-phone.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    BoardComponentComponent,
+    BoardComponent,
     StageColumnComponent,
     DealCard,
     CardDatePipe,

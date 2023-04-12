@@ -1,4 +1,3 @@
-
 .card-wrap {
   touch-action: manipulation;
   cursor: grab;
@@ -20,8 +19,6 @@
     padding: 5px;
     gap: 10px;
 
-
-
     .section1 {
       display: flex;
       flex-direction: row;
@@ -30,8 +27,6 @@
 
       .card-title {
         color: #000;
-
-
       }
 
       .icon-container {
@@ -42,7 +37,6 @@
           padding: 1px 1px;
         }
       }
-    ;
     }
 
     .section2 {
@@ -104,11 +98,8 @@
 
     @media (max-width: 768px) {
       padding: 4px;
-      gap: 2px;    }
+      gap: 2px;
+    }
 
   }
 }
-
-
-
-

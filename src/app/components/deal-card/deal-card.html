@@ -3,7 +3,7 @@
   <div class="card">
 
     <div class="section1">
-      <div [title]="deal.company" class="card-title eclipse">
+      <div [title]="deal.company" class="card-title ellipsis">
         {{deal.company.split('-').join(" ")}}
       </div>
 
@@ -19,23 +19,19 @@
       <div class="probability badge badge--blue"
            matTooltip="Probability Status {{deal.probability_status}}"
            matTooltipClass="above"
-           matTooltipPosition="above"
-      >
+           matTooltipPosition="above">
         {{deal.probability_status}}
       </div>
     </div>
 
     <div class="section3">
       <mat-icon class="icon">phone</mat-icon>
-      <div [title]="deal.first_name + deal.last_name" class="name eclipse">{{deal.first_name}} {{deal.last_name}}</div>
+      <div [title]="deal.first_name + deal.last_name" class="name ellipsis">{{deal.first_name}} {{deal.last_name}}</div>
       <div class="phone"> {{deal.phone | cardPhone}}</div>
-
-
     </div>
 
     <div class="section4">
       <mat-icon class="icon">calendar_today</mat-icon>
-
       <div class="date">{{deal.date  | cardDate}}</div>
     </div>
 
