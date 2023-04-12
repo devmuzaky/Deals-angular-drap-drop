@@ -12,8 +12,6 @@ export class CardPhonePipe implements PipeTransform {
     if (closingParenIndex !== -1) {
       phone = phone.slice(0, closingParenIndex + 1) + " " + phone.slice(closingParenIndex + 1);
     }
-
     return phone;
   }
-
 }
