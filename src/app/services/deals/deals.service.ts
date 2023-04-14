@@ -26,28 +26,30 @@ export class DealsService {
 
 
   getDeals(): Observable<StageModel[]> {
-    return this.http.get<{
-      deals: DealsModel[]
-    }>('https://my-json-server.typicode.com/mabukoush1/contacts/db').pipe(map((response: {
-      deals: DealsModel[]
-    }): StageModel[] => {
-      this.stages.forEach((stage: StageModel) => stage.deals = response.deals.filter((deal: DealsModel) => deal.status === stage.name));
+    return this.http.get<{deals: DealsModel[]}>('https://my-json-server.typicode.com/mabukoush1/contacts/db')
+      .pipe(
+        map((response: {deals: DealsModel[]}): StageModel[] => {
+      this.stages.forEach(
+        (stage: StageModel) => stage.deals = response.deals.filter((deal: DealsModel) => deal.status === stage.name)
+      );
       return this.stages;
-    }))
+    }));
   }
 
   searchDeal(search: string): Observable<StageModel[]> {
     const filteredStages: StageModel[] = JSON.parse(JSON.stringify(this.stages));
     filteredStages.forEach((stage: StageModel) => {
       stage.deals = stage.deals.filter((deal: DealsModel) => {
-        return deal.first_name.toLowerCase().includes(search.toLowerCase()) || deal.last_name.toLowerCase().includes(search.toLowerCase()) || deal.email.toLowerCase().includes(search.toLowerCase())
+        return deal.first_name.toLowerCase().includes(search.toLowerCase())
+          || deal.last_name.toLowerCase().includes(search.toLowerCase())
+          || deal.email.toLowerCase().includes(search.toLowerCase())
       });
     });
     return of(filteredStages);
   }
 
-  updateStatus(dealId: number, newStatus: string): Observable<DealsModel> {
-    const stage = this.stages.find((stage: StageModel) => stage.id === newStatus);
+  updateStatus(dealId: number, newStatusId: string): Observable<DealsModel> {
+    const stage = this.stages.find((stage: StageModel) => stage.id === newStatusId);
     if (stage) {
       const deal = stage.deals.find((deal: DealsModel) => deal.id === dealId);
       if (deal) {
